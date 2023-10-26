@@ -18,12 +18,6 @@
 .nav-link {
   font-size: 1.5rem;
 }
-.reference-navbar {
-  font-size: 1.5rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background-color: #303241;
-  padding: 0;
-}
 
 #navlist {
   flex-direction: column;
