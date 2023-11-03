@@ -50,7 +50,7 @@
 .occupation {
   text-align: center;
   line-height: 2;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #fff;
   font-weight: normal;
   width: 100%;
@@ -59,7 +59,10 @@
   color: #66bfbf;
   text-align: center;
 }
-
+.contact-me-text {
+  font-size: 1.2rem;
+  color: #fff;
+}
 .myline {
   border-style: none;
   border-top-style: dotted;
@@ -126,4 +129,20 @@
   margin: auto auto 100px auto;
   color: #fff;
   line-height: 1.6;
+}
+
+@media only screen and (max-width: 600px) {
+  .myname,
+  .contact-me,
+  .contact-me-text,
+  .contact-me-text-button,
+  h2 {
+    font-size: 0.8rem;
+  }
+  .occupation,
+  .text-about,
+  .contact-message,
+  .contactbutton {
+    font-size: 0.8rem;
+  }
 }
