@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent {
+  isButtonClicked:boolean = false;
 
+  changeFrame()
+  {
+    this.isButtonClicked = !this.isButtonClicked;
+  }
 }

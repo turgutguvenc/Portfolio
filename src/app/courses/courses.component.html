@@ -20,8 +20,58 @@
         </div>
       </div>
     </div>
-
     <div class="row">
+      <div class="col-lg-3 col-md-6 pricing-column-wrapper">
+        <div class="pricing-column" *ngIf="!isButtonClicked; else noframe">
+          <div class="pricing-price-row">
+            <div class="pricing-price-wrapper">
+              <div class="pricing-price">
+                <div class="pricing-cost">VBO</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-row-title">
+            <ng-content #frame></ng-content>
+            <div class="pricing_row_title">
+              Data Science and Machine Learning Bootcamp(300 Hours)
+            </div>
+          </div>
+          <figure class="pricing-row">Machine Learning Algorithms</figure>
+          <figure class="pricing-row">
+            <span>Data Analysis</span>
+          </figure>
+          <figure class="pricing-row">
+            Scikit-learn for Machine Learning Tasks
+          </figure>
+          <figure class="pricing-row">Neural Networks</figure>
+          <figure class="pricing-row">
+            Interactive Dynamic Visualizations
+          </figure>
+          <figure class="pricing-row">Natural Language Processing</figure>
+          <div class="pricing-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFrame()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframe>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/turgutcertificate.jpeg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFrame()">Close</a>
+            </div>
+          </div>
+        </ng-template>
+      </div>
       <div class="col-lg-3 col-md-6 pricing-column-wrapper">
         <div class="pricing-column">
           <div class="pricing-price-row">
@@ -34,56 +84,27 @@
           </div>
           <div class="pricing-row-title">
             <div class="pricing_row_title">
-              Python for Data Science and Machine Learning Bootcamp
-            </div>
-          </div>
-          <figure class="pricing-row">Machine Learning Algorithms</figure>
-          <figure class="pricing-row">
-            <span>Data Analysis</span>
-          </figure>
-          <figure class="pricing-row">
-            SciKit-Learn for Machine Learning Tasks
-          </figure>
-          <figure class="pricing-row">Neural Networks</figure>
-          <figure class="pricing-row">
-            Interactive Dynamic Visualizations
-          </figure>
-          <figure class="pricing-row">Natural Language Processing</figure>
-          <div class="pricing-footer">
-            <div class="gem-button-container gem-button-position-center">
-              <a href="#" class="gem-button gem-green">See Credentails</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 pricing-column-wrapper">
-        <div class="pricing-column">
-          <div class="pricing-price-row">
-            <div class="pricing-price-wrapper">
-              <div class="pricing-price">
-                <div class="pricing-cost">VBO</div>
-                <div class="time">Course</div>
-              </div>
-            </div>
-          </div>
-          <div class="pricing-row-title">
-            <div class="pricing_row_title">
               Python A-Z™: Data Science and Machine Learning
             </div>
           </div>
           <figure class="pricing-row">Python Programming</figure>
           <figure class="pricing-row">
-            <span style="color: #5f727f">Statistics for Data Science</span>
+            <span>Statistics for Data Science</span>
           </figure>
           <figure class="pricing-row">
-            <span style="color: #5f727f">Data Manipulation and Cleaning</span>
+            <span>Data Manipulation and Cleaning</span>
           </figure>
           <figure class="pricing-row">Machine Learning</figure>
           <figure class="pricing-row">Big Data Analysis</figure>
           <figure class="pricing-row">Databases and SQL</figure>
           <div class="pricing-footer">
             <div class="gem-button-container gem-button-position-center">
-              <a class="gem-button gem-purpel">See Credentails</a>
+              <a
+                href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-f4be5cf9-9dc7-479a-9e70-d65f5ca21892.pdf"
+                target="_blank"
+                class="gem-button gem-purpel"
+                >See Credentails</a
+              >
             </div>
           </div>
         </div>
@@ -108,7 +129,7 @@
             <span>Web Development</span>
           </figure>
           <figure class="pricing-row">
-            <span style="color: #5f727f">Python for Data Science</span>
+            <span>Python for Data Science</span>
           </figure>
           <figure class="pricing-row">Build Games with Python</figure>
           <figure class="pricing-row">Web Apps with Python</figure>
@@ -125,7 +146,7 @@
           <div class="pricing-price-row">
             <div class="pricing-price-wrapper">
               <div class="pricing-price">
-                <div style="" class="pricing-cost">Coursera</div>
+                <div class="pricing-cost">Coursera</div>
                 <div class="time" style="display: inline-block">Course</div>
               </div>
             </div>
@@ -133,14 +154,12 @@
           <div class="pricing-row-title">
             <div class="pricing_row_title">Machine Learning Specialization</div>
           </div>
+          <figure class="pricing-row">Build ML Models with Scikit-learn</figure>
           <figure class="pricing-row">
-            Build ML Models with NumPy & Scikit-learn
+            <span>Recommender Systems</span>
           </figure>
           <figure class="pricing-row">
-            <span style="color: #5f727f">Recommender Systems</span>
-          </figure>
-          <figure class="pricing-row">
-            <span style="color: #5f727f">Supervised Learning</span>
+            <span>Supervised Learning</span>
           </figure>
           <figure class="pricing-row">
             Unsupervised Learning and Clustering
@@ -172,9 +191,7 @@
               Probability - The Science of Uncertainty and Data
             </div>
           </div>
-          <figure class="pricing-row">
-            Structure and Elements of Probabilistic Models
-          </figure>
+          <figure class="pricing-row">Structure of Probabilistic Models</figure>
           <figure class="pricing-row">
             <span>Probability Models and Axioms</span>
           </figure>
@@ -211,20 +228,16 @@
               Complete Python Bootcamp From Zero to Hero in Python
             </div>
           </div>
-          <figure class="pricing-row">Python Programming</figure>
+          <figure class="pricing-row">Advanced Python Programming</figure>
           <figure class="pricing-row">
-            <span style="color: #5f727f">Object Oriented Programming</span>
+            <span>Object Oriented Programming</span>
           </figure>
           <figure class="pricing-row">
-            <span style="color: #5f727f"
-              >Python Objects and Data Structures</span
-            >
+            <span>Python Objects and Data Structures</span>
           </figure>
-          <figure class="pricing-row">Web Scrapping with Python</figure>
           <figure class="pricing-row">Errors and Exception Handling</figure>
-          <figure class="pricing-row">
-            Python Functions, Methods, Decorators and Generators
-          </figure>
+          <figure class="pricing-row">Python Functions and Methods</figure>
+          <figure class="pricing-row">Advanced Python Modules</figure>
           <div class="pricing-footer">
             <div class="gem-button-container gem-button-position-center">
               <a
@@ -248,32 +261,21 @@
           </div>
           <div class="pricing-row-title">
             <div class="pricing_row_title">
-              Machine Learning Engineering for Production (MLOps) Specialization
+              Machine Learning Engineering for Production
             </div>
           </div>
+          <figure class="pricing-row">Design Machine Learning System</figure>
           <figure class="pricing-row">
-            Design Machine Learning Production System End-to-End
+            <span>Machine Learning Modeling Strategies</span>
           </figure>
           <figure class="pricing-row">
-            <span
-              >Machine Learning Project Scoping, Data needs, Modeling
-              Strategies</span
-            >
+            <span>Machine Learning Model Deployment </span>
           </figure>
+          <figure class="pricing-row">Build Data Pipelines</figure>
           <figure class="pricing-row">
-            <span style="color: #5f727f"
-              >Machine Learning Model Deployment
-            </span>
+            Continuously Improve ML Application
           </figure>
-          <figure class="pricing-row">
-            Build Data Pipelines by Gathering, Cleaning, and Validating Datasets
-          </figure>
-          <figure class="pricing-row">
-            Continuously Improve Productionized Machine Learning Application
-          </figure>
-          <figure class="pricing-row">
-            Maintain and Monitor Continuously Operating Production System
-          </figure>
+          <figure class="pricing-row">Maintain and Monitor ML System</figure>
           <div class="pricing-footer">
             <div class="gem-button-container gem-button-position-center">
               <a
@@ -290,7 +292,7 @@
           <div class="pricing-price-row">
             <div class="pricing-price-wrapper">
               <div class="pricing-price">
-                <div style="" class="pricing-cost">Coursera</div>
+                <div class="pricing-cost">Coursera</div>
                 <div class="time" style="display: inline-block">Course</div>
               </div>
             </div>
@@ -298,23 +300,20 @@
           <div class="pricing-row-title">
             <div class="pricing_row_title">Machine Learning Specialization</div>
           </div>
+          <figure class="pricing-row">Build Machine Learning Models</figure>
           <figure class="pricing-row">
-            Build Machine Learning Models in Python Using NumPy and Scikit-learn
+            <span>Supervised Machine Learning Models</span>
           </figure>
           <figure class="pricing-row">
-            <span style="color: #5f727f"
-              >Build and Train Supervised Machine Learning Models for
-              Prediction</span
-            >
+            <span>Unsupervised Machine Learning Models</span>
           </figure>
           <figure class="pricing-row">
-            <span style="color: #5f727f">Recommender Systems</span>
+            <span>Recommender Systems</span>
           </figure>
           <figure class="pricing-row">
             Machine Learning Model Development
           </figure>
-          <figure class="pricing-row">Anomaly Detection</figure>
-          <figure class="pricing-row">Tensorflow</figure>
+          <figure class="pricing-row">Machine Learning Model Deployment</figure>
           <div class="pricing-footer">
             <div class="gem-button-container gem-button-position-center">
               <a
