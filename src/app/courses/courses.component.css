@@ -20,6 +20,9 @@
 .title-h1 .light {
   font-weight: normal;
 }
+.row {
+  padding: 2% 0;
+}
 .division-line {
 }
 .pricing-price-wrapper {
@@ -47,8 +50,8 @@
 }
 
 .pricing-cost {
-  padding-top: 5%;
-  font-size: 40px;
+  padding-top: 12%;
+  font-size: 2rem;
   font-weight: 300;
   line-height: 1;
 }
@@ -127,6 +130,7 @@ body {
   -ms-transition: all 0.3s ease-in-out 0s;
   -o-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
+  width: 90%;
 }
 
 .pricing-column-wrapper {

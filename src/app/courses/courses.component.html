@@ -20,9 +20,10 @@
         </div>
       </div>
     </div>
+    <!-- First Row -->
     <div class="row">
-      <div class="col-lg-3 col-md-6 pricing-column-wrapper">
-        <div class="pricing-column" *ngIf="!isButtonClicked; else noframe">
+      <div class="col-md-6 pricing-column-wrapper">
+        <div class="pricing-column" *ngIf="!isFirstButtonClicked; else noframe">
           <div class="pricing-price-row">
             <div class="pricing-price-wrapper">
               <div class="pricing-price">
@@ -33,7 +34,6 @@
           </div>
 
           <div class="pricing-row-title">
-            <ng-content #frame></ng-content>
             <div class="pricing_row_title">
               Data Science and Machine Learning Bootcamp(300 Hours)
             </div>
@@ -67,117 +67,325 @@
               height="83%"
             />
             <div class="gem-button-container gem-button-position-center">
-              <a class="gem-button gem-green" (click)="changeFrame()">Close</a>
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrame()"
+                >Close</a
+              >
             </div>
           </div>
         </ng-template>
       </div>
-      <div class="col-lg-3 col-md-6 pricing-column-wrapper">
-        <div class="pricing-column">
-          <div class="pricing-price-row">
-            <div class="pricing-price-wrapper">
-              <div class="pricing-price">
-                <div class="pricing-cost">Udemy</div>
-                <div class="time">Course</div>
-              </div>
-            </div>
-          </div>
-          <div class="pricing-row-title">
-            <div class="pricing_row_title">
-              Python A-Z™: Data Science and Machine Learning
-            </div>
-          </div>
-          <figure class="pricing-row">Python Programming</figure>
-          <figure class="pricing-row">
-            <span>Statistics for Data Science</span>
-          </figure>
-          <figure class="pricing-row">
-            <span>Data Manipulation and Cleaning</span>
-          </figure>
-          <figure class="pricing-row">Machine Learning</figure>
-          <figure class="pricing-row">Big Data Analysis</figure>
-          <figure class="pricing-row">Databases and SQL</figure>
-          <div class="pricing-footer">
-            <div class="gem-button-container gem-button-position-center">
-              <a
-                href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-f4be5cf9-9dc7-479a-9e70-d65f5ca21892.pdf"
-                target="_blank"
-                class="gem-button gem-purpel"
-                >See Credentails</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 pricing-column-wrapper">
-        <div class="pricing-column">
-          <div class="pricing-price-row">
-            <div class="pricing-price-wrapper">
-              <div class="pricing-price">
-                <div class="pricing-cost">Udemy</div>
-                <div class="time">Course</div>
-              </div>
-            </div>
-          </div>
-          <div class="pricing-row-title">
-            <div class="pricing_row_title">
-              100 Days of Code: The Complete Python Pro Bootcamp for 2022
-            </div>
-          </div>
-          <figure class="pricing-row">Desktop Applications with Python</figure>
-          <figure class="pricing-row">
-            <span>Web Development</span>
-          </figure>
-          <figure class="pricing-row">
-            <span>Python for Data Science</span>
-          </figure>
-          <figure class="pricing-row">Build Games with Python</figure>
-          <figure class="pricing-row">Web Apps with Python</figure>
-          <figure class="pricing-row">Testing with Selenium</figure>
-          <div class="pricing-footer">
-            <div class="gem-button-container gem-button-position-center">
-              <a class="gem-button gem-orange">See Credentails</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 pricing-column-wrapper">
-        <div class="pricing-column">
+      <div class="col-md-6 pricing-column-wrapper">
+        <div
+          class="pricing-column"
+          *ngIf="!isSecondButtonClicked; else noframe2"
+        >
           <div class="pricing-price-row">
             <div class="pricing-price-wrapper">
               <div class="pricing-price">
                 <div class="pricing-cost">Coursera</div>
-                <div class="time" style="display: inline-block">Course</div>
+                <div class="time">Course</div>
               </div>
             </div>
           </div>
+
           <div class="pricing-row-title">
-            <div class="pricing_row_title">Machine Learning Specialization</div>
+            <div class="pricing_row_title">
+              Build Better Generative Adversarial Networks(GANs)
+            </div>
           </div>
-          <figure class="pricing-row">Build ML Models with Scikit-learn</figure>
+          <figure class="pricing-row">Use GANs for Data Augmentation</figure>
           <figure class="pricing-row">
-            <span>Recommender Systems</span>
+            <span>Build Survey GANs Applications</span>
           </figure>
           <figure class="pricing-row">
-            <span>Supervised Learning</span>
+            Build Pix2Pix and CycleGAN for Image Translation
           </figure>
           <figure class="pricing-row">
-            Unsupervised Learning and Clustering
+            Use FID Method to Assess GAN Fidelity and Diversity
           </figure>
-          <figure class="pricing-row">Artificial Neural Network</figure>
-          <figure class="pricing-row">Tensorflow</figure>
+          <figure class="pricing-row">Build Compare Generative Models</figure>
+          <figure class="pricing-row">
+            Detect Bias in GAN and Implement StyleGAN Techniques
+          </figure>
           <div class="pricing-footer">
             <div class="gem-button-container gem-button-position-center">
-              <a class="gem-button gem-yellow">See Credentails</a>
+              <a class="gem-button gem-green" (click)="changeFrameGans()"
+                >See Certificate</a
+              >
             </div>
           </div>
         </div>
+        <ng-template #noframe2>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/gans2.jpg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameGans()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
       </div>
     </div>
     <hr />
+    <!-- Second Row -->
     <div class="row">
-      <div class="col-lg-3 col-md-6 pricing-column-wrapper">
-        <div class="pricing-column">
+      <div class="col-md-6 pricing-column-wrapper">
+        <div
+          class="pricing-column"
+          *ngIf="!isThirdButtonClicked; else noframedeep"
+        >
+          <div class="pricing-price-row">
+            <div class="pricing-price-wrapper">
+              <div class="pricing-price">
+                <div class="pricing-cost">Coursera</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-row-title">
+            <div class="pricing_row_title">
+              Deep Learning Specialization(5 Courses)
+            </div>
+          </div>
+          <figure class="pricing-row">Neural Networks and Deep Learning</figure>
+          <figure class="pricing-row">
+            Convolutional Neural Networks and Image Recognition
+          </figure>
+          <figure class="pricing-row">
+            <span>Recurrent Neural Networks and LSTMs</span>
+          </figure>
+          <figure class="pricing-row">Artificial Neural Networks</figure>
+          <figure class="pricing-row">
+            Sequence Models and Creating Speech Recognition, Chatbots, Machine
+            Translation, NLP
+          </figure>
+          <figure class="pricing-row">Improving Deep Neural Networks</figure>
+          <div class="pricing-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFrameDeep()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframedeep>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/deeplearningspecialization.jpg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameDeep()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+      <div class="col-md-6 pricing-column-wrapper">
+        <div
+          class="pricing-column"
+          *ngIf="!isFourthButtonClicked; else noframe3"
+        >
+          <div class="pricing-price-row">
+            <div class="pricing-price-wrapper">
+              <div class="pricing-price">
+                <div class="pricing-cost">Coursera</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-row-title">
+            <div class="pricing_row_title">
+              Build Basic Generative Adversarial Networks(GANs)
+            </div>
+          </div>
+          <figure class="pricing-row">GANs and Their Applications</figure>
+          <figure class="pricing-row">
+            <span>Fundamental Components of GANs</span>
+          </figure>
+          <figure class="pricing-row">GAN Architectures</figure>
+          <figure class="pricing-row">Build Conditional GANs</figure>
+          <figure class="pricing-row">
+            Image Generation andProcessing with GANs
+          </figure>
+          <figure class="pricing-row">Train GANs with PyTorch</figure>
+          <div class="pricing-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFrameGans2()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframe3>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/gans1.jpg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameGans2()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+    <hr />
+    <!-- Third Row -->
+    <div class="row">
+      <div class="col-md-6 pricing-column-wrapper">
+        <div
+          class="pricing-column"
+          *ngIf="!isFifthButtonClicked; else noframepowerbi"
+        >
+          <div class="pricing-price-row">
+            <div class="pricing-price-wrapper">
+              <div class="pricing-price">
+                <div class="pricing-cost">CodeBasics</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-row-title">
+            <div class="pricing_row_title">
+              Get Job Ready: Power BI Data Analytics for All Levels
+            </div>
+          </div>
+          <figure class="pricing-row">
+            Data Collection, Validation, and Exploration with Power BI
+          </figure>
+          <figure class="pricing-row">
+            Data Transformation with Power Query
+          </figure>
+          <figure class="pricing-row">
+            <span>Data Modelling and Calculated Columns</span>
+          </figure>
+          <figure class="pricing-row">Build Finance Views and Metrics</figure>
+          <figure class="pricing-row">Designing Effective Dashboards</figure>
+          <figure class="pricing-row">Implementing Stakeholder Feedback</figure>
+          <div class="pricing-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFramePowerBI()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframepowerbi>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/PowerBI.jpg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFramePowerBI()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+      <div class="col-md-6 pricing-column-wrapper">
+        <div
+          class="pricing-column"
+          *ngIf="!isSixthButtonClicked; else noframesql"
+        >
+          <div class="pricing-price-row">
+            <div class="pricing-price-wrapper">
+              <div class="pricing-price">
+                <div class="pricing-cost">CodeBasics</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-row-title">
+            <div class="pricing_row_title">
+              SQL Beginner to Advanced For Data Professionals
+            </div>
+          </div>
+          <figure class="pricing-row">Database Creation and Updates</figure>
+          <figure class="pricing-row">
+            <span>Complex Queries</span>
+          </figure>
+          <figure class="pricing-row">
+            Data Rerievals with Single and Multiple Tables
+          </figure>
+          <figure class="pricing-row">Financial Analytics with SQL</figure>
+          <figure class="pricing-row">
+            Database Views, and Finding Top Customer, Trends, Markets, and
+            Products
+          </figure>
+          <figure class="pricing-row">Supply Chain Analytics</figure>
+          <div class="pricing-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFrameSql()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframesql>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/sql.jpg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameSql()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+    <hr />
+    <!--Fourth Row -->
+    <div class="row">
+      <div class="col-md-6 pricing-column-wrapper">
+        <div
+          class="pricing-column"
+          *ngIf="!isSeventhButtonClicked; else noframemit"
+        >
           <div class="pricing-price-row">
             <div class="pricing-price-wrapper">
               <div class="pricing-price">
@@ -186,16 +394,17 @@
               </div>
             </div>
           </div>
+
           <div class="pricing-row-title">
             <div class="pricing_row_title">
               Probability - The Science of Uncertainty and Data
             </div>
           </div>
           <figure class="pricing-row">Structure of Probabilistic Models</figure>
+          <figure class="pricing-row">Probability Models and Axioms</figure>
           <figure class="pricing-row">
-            <span>Probability Models and Axioms</span>
+            <span>Bayesian Inference</span>
           </figure>
-          <figure class="pricing-row">Bayesian Inference</figure>
           <figure class="pricing-row">
             Limit Theorems and Classical Statistics
           </figure>
@@ -203,18 +412,36 @@
           <figure class="pricing-row">Bernoulli and Poisson Processes</figure>
           <div class="pricing-footer">
             <div class="gem-button-container gem-button-position-center">
-              <a
-                href="https://courses.edx.org/certificates/23812824c294496a93efea18657b74cd"
-                class="gem-button gem-purpel"
-                class="gem-button gem-green"
-                >See Credentails</a
+              <a class="gem-button gem-green" (click)="changeFrameMit()"
+                >See Certificate</a
               >
             </div>
           </div>
         </div>
+        <ng-template #noframemit>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/mit.JPG"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameMit()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
       </div>
-      <div class="col-lg-3 col-md-6 pricing-column-wrapper">
-        <div class="pricing-column">
+      <div class="col-md-6 pricing-column-wrapper">
+        <div
+          class="pricing-column"
+          *ngIf="!isEighthButtonClicked; else noframephyton"
+        >
           <div class="pricing-price-row">
             <div class="pricing-price-wrapper">
               <div class="pricing-price">
@@ -223,6 +450,7 @@
               </div>
             </div>
           </div>
+
           <div class="pricing-row-title">
             <div class="pricing_row_title">
               Complete Python Bootcamp From Zero to Hero in Python
@@ -233,24 +461,107 @@
             <span>Object Oriented Programming</span>
           </figure>
           <figure class="pricing-row">
-            <span>Python Objects and Data Structures</span>
+            Python Objects and Data Structures
           </figure>
           <figure class="pricing-row">Errors and Exception Handling</figure>
-          <figure class="pricing-row">Python Functions and Methods</figure>
+          <figure class="pricing-row">
+            Python Functions, Methods, and Classes
+          </figure>
           <figure class="pricing-row">Advanced Python Modules</figure>
           <div class="pricing-footer">
             <div class="gem-button-container gem-button-position-center">
-              <a
-                class="gem-button gem-purpel"
-                href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-1e4669fe-b67a-43c7-bcba-0acb32bcdf64.pdf"
-                >See Credentails</a
+              <a class="gem-button gem-green" (click)="changeFramePhyton()"
+                >See Certificate</a
               >
             </div>
           </div>
         </div>
+        <ng-template #noframephyton>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/phyton.jpg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFramePhyton()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
       </div>
-      <div class="col-lg-3 col-md-6 pricing-column-wrapper">
-        <div class="pricing-column">
+    </div>
+    <hr />
+    <!-- 5th Row -->
+    <div class="row">
+      <div class="col-md-6 pricing-column-wrapper">
+        <div
+          class="pricing-column"
+          *ngIf="!isNinethButtonClicked; else noframemachine"
+        >
+          <div class="pricing-price-row">
+            <div class="pricing-price-wrapper">
+              <div class="pricing-price">
+                <div class="pricing-cost">Udemy</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-row-title">
+            <div class="pricing_row_title">
+              Python A-Z™: Data Science and Machine Learning
+            </div>
+          </div>
+          <figure class="pricing-row">Python Programming</figure>
+          <figure class="pricing-row">Statistics for Data Science</figure>
+          <figure class="pricing-row">
+            <span>Data Manipulation and Cleaning</span>
+          </figure>
+          <figure class="pricing-row">
+            Supervised and Unsupervised Machine Learning Algorithms
+          </figure>
+          <figure class="pricing-row">Big Data Analysis</figure>
+          <figure class="pricing-row">
+            Working with Relational and NoSQL Databases
+          </figure>
+          <div class="pricing-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFrameMachine()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframemachine>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/datasciencevbo.jpg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameMachine()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+      <div class="col-md-6 pricing-column-wrapper">
+        <div
+          class="pricing-column"
+          *ngIf="!isTenthButtonClicked; else noframeneural"
+        >
           <div class="pricing-price-row">
             <div class="pricing-price-wrapper">
               <div class="pricing-price">
@@ -259,71 +570,323 @@
               </div>
             </div>
           </div>
+
           <div class="pricing-row-title">
             <div class="pricing_row_title">
-              Machine Learning Engineering for Production
+              Neural Networks and Deep Learning
             </div>
           </div>
-          <figure class="pricing-row">Design Machine Learning System</figure>
           <figure class="pricing-row">
-            <span>Machine Learning Modeling Strategies</span>
+            Supervised Learning with Neural Networks
           </figure>
           <figure class="pricing-row">
-            <span>Machine Learning Model Deployment </span>
+            <span>Artificial Neural Networks</span>
           </figure>
-          <figure class="pricing-row">Build Data Pipelines</figure>
+          <figure class="pricing-row">Neural Network Architecture</figure>
+          <figure class="pricing-row">Backpropagation</figure>
+          <figure class="pricing-row">Shallow and Deep Neural Networks</figure>
           <figure class="pricing-row">
-            Continuously Improve ML Application
+            Build, Train, and Deploy neural networks
           </figure>
-          <figure class="pricing-row">Maintain and Monitor ML System</figure>
           <div class="pricing-footer">
             <div class="gem-button-container gem-button-position-center">
-              <a
-                href="https://www.deeplearning.ai/courses/machine-learning-engineering-for-production-mlops/"
-                class="gem-button gem-orange"
-                >See Credentails</a
+              <a class="gem-button gem-green" (click)="changeFrameNeural()"
+                >See Certificate</a
               >
             </div>
           </div>
         </div>
+        <ng-template #noframeneural>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/neuralnetworks.jpg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameNeural()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
       </div>
-      <div class="col-lg-3 col-md-6 pricing-column-wrapper">
-        <div class="pricing-column">
+    </div>
+    <hr />
+    <!-- 6th Row -->
+    <div class="row">
+      <div class="col-md-6 pricing-column-wrapper" aty>
+        <div
+          class="pricing-column"
+          *ngIf="!isEleventhButtonClicked; else noframeneuralimproving"
+        >
           <div class="pricing-price-row">
             <div class="pricing-price-wrapper">
               <div class="pricing-price">
-                <div class="pricing-cost">Coursera</div>
-                <div class="time" style="display: inline-block">Course</div>
+                <div class="pricing-cost">Udemy</div>
+                <div class="time">Course</div>
               </div>
             </div>
           </div>
+
           <div class="pricing-row-title">
-            <div class="pricing_row_title">Machine Learning Specialization</div>
+            <div class="pricing_row_title">Improving Deep Neural Networks</div>
           </div>
-          <figure class="pricing-row">Build Machine Learning Models</figure>
           <figure class="pricing-row">
-            <span>Supervised Machine Learning Models</span>
+            Hyperparameter Tuning, Regularization and Optimization
           </figure>
           <figure class="pricing-row">
-            <span>Unsupervised Machine Learning Models</span>
+            <span
+              >Bias, Reducing Overfitting, Dropout Regularization, Normalizing
+              Inputs
+            </span>
           </figure>
           <figure class="pricing-row">
-            <span>Recommender Systems</span>
+            Weight Initialization, Vanishing and Exploding Gradients, Gradient
+            Checking
           </figure>
           <figure class="pricing-row">
-            Machine Learning Model Development
+            Optimization Algorithms: Adam, Mini-batch, RMSprop, SGD
           </figure>
-          <figure class="pricing-row">Machine Learning Model Deployment</figure>
+          <figure class="pricing-row">
+            Learning Rate Decay, Solving the Problem of Local Optima
+          </figure>
+          <figure class="pricing-row">
+            Normalizing Activation Functions, Hyperparameters Tuning
+          </figure>
           <div class="pricing-footer">
             <div class="gem-button-container gem-button-position-center">
               <a
-                href="https://www.deeplearning.ai/courses/machine-learning-specialization/"
-                class="gem-button gem-yellow"
-                >See Credentails</a
+                class="gem-button gem-green"
+                (click)="changeFrameNeuralImproving()"
+                >See Certificate</a
               >
             </div>
           </div>
         </div>
+        <ng-template #noframeneuralimproving>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/improving.JPG"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameNeuralImproving()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+      <div class="col-md-6 pricing-column-wrapper">
+        <div
+          class="pricing-column"
+          *ngIf="!isTwelvethButtonClicked; else noframeneuralstructuring"
+        >
+          <div class="pricing-price-row">
+            <div class="pricing-price-wrapper">
+              <div class="pricing-price">
+                <div class="pricing-cost">Udemy</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-row-title">
+            <div class="pricing_row_title">
+              Structuring Machine Learning Projects
+            </div>
+          </div>
+          <figure class="pricing-row">
+            Streamline and Optimize ML Production Workflow
+          </figure>
+          <figure class="pricing-row">
+            <span
+              >Carrying Out Error Analysis and Cleaning Up Incorrectly Labeled
+              Data
+            </span>
+          </figure>
+          <figure class="pricing-row">Satisficing and Optimizing Metric</figure>
+          <figure class="pricing-row">
+            Training and Testing on Different Distributions and Addressing Data
+            Mismatch
+          </figure>
+          <figure class="pricing-row">
+            Learning Rate Decay, Solving the Problem of Local Optima
+          </figure>
+          <figure class="pricing-row">Transfer Learning</figure>
+          <div class="pricing-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                (click)="changeFrameNeuralStructuring()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframeneuralstructuring>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/structuring.JPG"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameNeuralStructuring()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+    <hr />
+    <!-- 7th Row -->
+    <div class="row">
+      <div class="col-md-6 pricing-column-wrapper">
+        <div
+          class="pricing-column"
+          *ngIf="!isThirteenButtonClicked; else noframeneuralconvolution"
+        >
+          <div class="pricing-price-row">
+            <div class="pricing-price-wrapper">
+              <div class="pricing-price">
+                <div class="pricing-cost">Udemy</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-row-title">
+            <div class="pricing_row_title">Convolutional Neural Networks</div>
+          </div>
+          <figure class="pricing-row">
+            Deep Convolutional Models:Resnets, InceptionNets, MobileNets,
+            EfficientNets
+          </figure>
+          <figure class="pricing-row">
+            <span
+              >Data Augmentation,State of Computer Vision, and Deep
+              Convolutional Models
+            </span>
+          </figure>
+          <figure class="pricing-row">
+            Car Detection YOLO Algorithm and YOLO Algorithm Structure
+          </figure>
+          <figure class="pricing-row">
+            Art Generation with Neural Style Transfer
+          </figure>
+          <figure class="pricing-row">
+            Object Detection, Landmark Detection, Object Localization, Face
+            Recognition
+          </figure>
+          <figure class="pricing-row">
+            Semantic Segmentation with U-Net and U-Net Stucture
+          </figure>
+          <div class="pricing-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                (click)="changeFrameNeuralConvolution()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframeneuralconvolution>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/convolutional.jpg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameNeuralConvolution()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+      <div class="col-md-6 pricing-column-wrapper">
+        <div
+          class="pricing-column"
+          *ngIf="!isFourteenButtonClicked; else noframeneuralgans"
+        >
+          <div class="pricing-price-row">
+            <div class="pricing-price-wrapper">
+              <div class="pricing-price">
+                <div class="pricing-cost">Udemy</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-row-title">
+            <div class="pricing_row_title">
+              Generative Adversarial Networks (GANs) Specialization
+            </div>
+          </div>
+          <figure class="pricing-row">
+            Generative Adversarial Networks' Components
+          </figure>
+          <figure class="pricing-row">
+            <span>Build GANs using PyTorch </span>
+          </figure>
+          <figure class="pricing-row">
+            Advanced DCGANs using Convolutional Layers
+          </figure>
+          <figure class="pricing-row">
+            GANs for Data Augmentation and Privacy Preservation
+          </figure>
+          <figure class="pricing-row">Compare Generative Models</figure>
+          <figure class="pricing-row">
+            Assessment of GAN Fidelity and Diversity
+          </figure>
+          <div class="pricing-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFrameNeuralGANS()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframeneuralgans>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/gansspecialization.JPG"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameNeuralGANS()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
       </div>
     </div>
   </div>
