@@ -1,9 +1,11 @@
 .container {
   align-items: center;
   text-align: center;
-  width: 100%;
+  min-width: 100%;
   display: flex;
   justify-content: space-between;
+  background-color: #303241;
+  border-bottom: 1px solid #00bcd4;
 }
 .navbar {
   display: flex;
@@ -14,10 +16,15 @@
 }
 .navbar-brand {
   margin-right: 10%;
+  color: #fff;
 }
 
 .nav-link {
   font-size: 1.2rem;
+  color: #fff;
+}
+.active-link {
+  color: #c2185b;
 }
 .navbar-nav {
   display: flex;
@@ -43,7 +50,7 @@ a {
   font-weight: 400;
 }
 a:hover {
-  color: #eaf6f6;
+  color: #c2185b;
 }
 @media only screen and (max-width: 600px) {
   .nav-link,

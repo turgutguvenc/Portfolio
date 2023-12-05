@@ -4,13 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
-import { HomeComponent } from './home/home.component';
-import { CvComponent } from './cv/cv.component';
-import { CoursesComponent } from './courses/courses.component';
-import { ReferenceComponent } from './reference/reference.component';
-import { ProjectComponent } from './project/project.component';
-import { FooterComponent } from './footer/footer.component';
-import { SkillsComponent } from './components/skills/skills.component';
+import { HomeComponent } from './components/home/home.component';
+import { CvComponent } from './components/cv/cv.component';
+import { CoursesComponent } from './components/courses/courses.component';
+import { ReferenceComponent } from './components/reference/reference.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SkillsModule } from './components/skills/skills.module';
+import { ProjectsModule } from './components/projects/projects.module';
+import { MaterialModule } from './shared/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,15 +23,19 @@ import { SkillsComponent } from './components/skills/skills.component';
     CvComponent,
     CoursesComponent,
     ReferenceComponent,
-    ProjectComponent,
     FooterComponent,
-    SkillsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    SkillsModule,
+    ProjectsModule,
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

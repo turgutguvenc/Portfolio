@@ -1,0 +1,73 @@
+<mat-sidenav-container class="app-sidenav-container">
+  <mat-sidenav
+    #sidenav
+    class="app-sidenav mat-elevation-z10"
+    [opened]="!isScreenSmall"
+    [mode]="isScreenSmall ? 'over' : 'side'"
+  >
+    <mat-toolbar class="skill-title"> Projects </mat-toolbar>
+    <mat-divider class="title-divider"></mat-divider>
+    <mat-nav-list class="skill-main">
+      <mat-list-item class="skill-list">
+        <a
+          class="skill-item"
+          matLine
+          routerLink="datascience-projects"
+          routerLinkActive="active-link"
+        >
+          Data Science</a
+        >
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="skill-list">
+        <a
+          class="skill-item"
+          matLine
+          routerLink="frontend-projects"
+          routerLinkActive="active-link"
+        >
+          Frontend Development</a
+        >
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="skill-list">
+        <a
+          class="skill-item"
+          matLine
+          routerLink="machinelearning-projects"
+          routerLinkActive="active-link"
+        >
+          Machine Learning</a
+        >
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="skill-list">
+        <a
+          class="skill-item"
+          matLine
+          routerLink="computervision-projects"
+          routerLinkActive="active-link"
+        >
+          Computer Vision</a
+        >
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="skill-list">
+        <a
+          class="skill-item"
+          matLine
+          routerLink="software-projects"
+          routerLinkActive="active-link"
+        >
+          Software Development</a
+        >
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-nav-list>
+  </mat-sidenav>
+  <div class="app-sidenav-content">
+    <div class="wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</mat-sidenav-container>

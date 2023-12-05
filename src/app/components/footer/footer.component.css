@@ -1,0 +1,28 @@
+.bottom-container {
+  color: #fff;
+  background-color: #303241;
+  border-top: 1px solid #00bcd4;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: block;
+  text-align: center;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.footer-copy {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-link {
+  color: #fff;
+}
+@media only screen and (max-width: 600px) {
+  .bottom-container {
+    padding: 0;
+    font-size: 0.8rem;
+  }
+  a {
+    font-size: 0.8rem;
+  }
+}

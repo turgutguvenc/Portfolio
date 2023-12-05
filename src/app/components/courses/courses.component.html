@@ -1,0 +1,893 @@
+<div id="mainCoantiner">
+  <!--dust particel-->
+  <div class="margin-body">
+    <div>
+      <div class="starsec"></div>
+      <div class="starthird"></div>
+      <div class="starfourth"></div>
+      <div class="starfifth"></div>
+    </div>
+    <!--Dust particle end--->
+
+    <div class="row">
+      <div class="col-sm-12 col-md-12">
+        <div class="wpb_text_column wpb_content_element">
+          <div class="wpb_wrapper">
+            <div class="title-h1 text-center">
+              <span class="light">My Courses</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- First Row -->
+    <div class="row">
+      <div class="col-md-6 project-column-wrapper">
+        <div class="project-column" *ngIf="!isFirstButtonClicked; else noframe">
+          <div class="project-price-row">
+            <div class="project-price-wrapper">
+              <div class="project-price">
+                <div class="project-cost">VBO</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-row-title">
+            <div class="project_row_title">
+              Data Science and Machine Learning Bootcamp(300 Hours)
+            </div>
+          </div>
+          <figure class="project-row">Machine Learning Algorithms</figure>
+          <figure class="project-row">
+            <span>Data Analysis</span>
+          </figure>
+          <figure class="project-row">
+            Scikit-learn for Machine Learning Tasks
+          </figure>
+          <figure class="project-row">Neural Networks</figure>
+          <figure class="project-row">
+            Interactive Dynamic Visualizations
+          </figure>
+          <figure class="project-row">Natural Language Processing</figure>
+          <div class="project-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFrame()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframe>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/turgutcertificate.jpeg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrame()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+      <div class="col-md-6 project-column-wrapper">
+        <div
+          class="project-column"
+          *ngIf="!isSecondButtonClicked; else noframe2"
+        >
+          <div class="project-price-row">
+            <div class="project-price-wrapper">
+              <div class="project-price">
+                <div class="project-cost">Coursera</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-row-title">
+            <div class="project_row_title">
+              Build Better Generative Adversarial Networks(GANs)
+            </div>
+          </div>
+          <figure class="project-row">Use GANs for Data Augmentation</figure>
+          <figure class="project-row">
+            <span>Build Survey GANs Applications</span>
+          </figure>
+          <figure class="project-row">
+            Build Pix2Pix and CycleGAN for Image Translation
+          </figure>
+          <figure class="project-row">
+            Use FID Method to Assess GAN Fidelity and Diversity
+          </figure>
+          <figure class="project-row">Build Compare Generative Models</figure>
+          <figure class="project-row">
+            Detect Bias in GAN and Implement StyleGAN Techniques
+          </figure>
+          <div class="project-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFrameGans()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframe2>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/gans2.jpg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameGans()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+    <hr />
+    <!-- Second Row -->
+    <div class="row">
+      <div class="col-md-6 project-column-wrapper">
+        <div
+          class="project-column"
+          *ngIf="!isThirdButtonClicked; else noframedeep"
+        >
+          <div class="project-price-row">
+            <div class="project-price-wrapper">
+              <div class="project-price">
+                <div class="project-cost">Coursera</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-row-title">
+            <div class="project_row_title">
+              Deep Learning Specialization(5 Courses)
+            </div>
+          </div>
+          <figure class="project-row">Neural Networks and Deep Learning</figure>
+          <figure class="project-row">
+            Convolutional Neural Networks and Image Recognition
+          </figure>
+          <figure class="project-row">
+            <span>Recurrent Neural Networks and LSTMs</span>
+          </figure>
+          <figure class="project-row">Artificial Neural Networks</figure>
+          <figure class="project-row">
+            Sequence Models and Creating Speech Recognition, Chatbots, Machine
+            Translation, NLP
+          </figure>
+          <figure class="project-row">Improving Deep Neural Networks</figure>
+          <div class="project-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFrameDeep()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframedeep>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/deeplearningspecialization.jpg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameDeep()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+      <div class="col-md-6 project-column-wrapper">
+        <div
+          class="project-column"
+          *ngIf="!isFourthButtonClicked; else noframe3"
+        >
+          <div class="project-price-row">
+            <div class="project-price-wrapper">
+              <div class="project-price">
+                <div class="project-cost">Coursera</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-row-title">
+            <div class="project_row_title">
+              Build Basic Generative Adversarial Networks(GANs)
+            </div>
+          </div>
+          <figure class="project-row">GANs and Their Applications</figure>
+          <figure class="project-row">
+            <span>Fundamental Components of GANs</span>
+          </figure>
+          <figure class="project-row">GAN Architectures</figure>
+          <figure class="project-row">Build Conditional GANs</figure>
+          <figure class="project-row">
+            Image Generation andProcessing with GANs
+          </figure>
+          <figure class="project-row">Train GANs with PyTorch</figure>
+          <div class="project-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFrameGans2()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframe3>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/gans1.jpg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameGans2()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+    <hr />
+    <!-- Third Row -->
+    <div class="row">
+      <div class="col-md-6 project-column-wrapper">
+        <div
+          class="project-column"
+          *ngIf="!isFifthButtonClicked; else noframepowerbi"
+        >
+          <div class="project-price-row">
+            <div class="project-price-wrapper">
+              <div class="project-price">
+                <div class="project-cost">CodeBasics</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-row-title">
+            <div class="project_row_title">
+              Get Job Ready: Power BI Data Analytics for All Levels
+            </div>
+          </div>
+          <figure class="project-row">
+            Data Collection, Validation, and Exploration with Power BI
+          </figure>
+          <figure class="project-row">
+            Data Transformation with Power Query
+          </figure>
+          <figure class="project-row">
+            <span>Data Modelling and Calculated Columns</span>
+          </figure>
+          <figure class="project-row">Build Finance Views and Metrics</figure>
+          <figure class="project-row">Designing Effective Dashboards</figure>
+          <figure class="project-row">Implementing Stakeholder Feedback</figure>
+          <div class="project-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFramePowerBI()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframepowerbi>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/PowerBI.jpg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFramePowerBI()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+      <div class="col-md-6 project-column-wrapper">
+        <div
+          class="project-column"
+          *ngIf="!isSixthButtonClicked; else noframesql"
+        >
+          <div class="project-price-row">
+            <div class="project-price-wrapper">
+              <div class="project-price">
+                <div class="project-cost">CodeBasics</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-row-title">
+            <div class="project_row_title">
+              SQL Beginner to Advanced For Data Professionals
+            </div>
+          </div>
+          <figure class="project-row">Database Creation and Updates</figure>
+          <figure class="project-row">
+            <span>Complex Queries</span>
+          </figure>
+          <figure class="project-row">
+            Data Rerievals with Single and Multiple Tables
+          </figure>
+          <figure class="project-row">Financial Analytics with SQL</figure>
+          <figure class="project-row">
+            Database Views, and Finding Top Customer, Trends, Markets, and
+            Products
+          </figure>
+          <figure class="project-row">Supply Chain Analytics</figure>
+          <div class="project-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFrameSql()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframesql>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/sql.jpg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameSql()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+    <hr />
+    <!--Fourth Row -->
+    <div class="row">
+      <div class="col-md-6 project-column-wrapper">
+        <div
+          class="project-column"
+          *ngIf="!isSeventhButtonClicked; else noframemit"
+        >
+          <div class="project-price-row">
+            <div class="project-price-wrapper">
+              <div class="project-price">
+                <div class="project-cost">MIT</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-row-title">
+            <div class="project_row_title">
+              Probability - The Science of Uncertainty and Data
+            </div>
+          </div>
+          <figure class="project-row">Structure of Probabilistic Models</figure>
+          <figure class="project-row">Probability Models and Axioms</figure>
+          <figure class="project-row">
+            <span>Bayesian Inference</span>
+          </figure>
+          <figure class="project-row">
+            Limit Theorems and Classical Statistics
+          </figure>
+          <figure class="project-row">Markov Chains</figure>
+          <figure class="project-row">Bernoulli and Poisson Processes</figure>
+          <div class="project-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFrameMit()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframemit>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/mit.JPG"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameMit()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+      <div class="col-md-6 project-column-wrapper">
+        <div
+          class="project-column"
+          *ngIf="!isEighthButtonClicked; else noframephyton"
+        >
+          <div class="project-price-row">
+            <div class="project-price-wrapper">
+              <div class="project-price">
+                <div class="project-cost">Udemy</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-row-title">
+            <div class="project_row_title">
+              Complete Python Bootcamp From Zero to Hero in Python
+            </div>
+          </div>
+          <figure class="project-row">Advanced Python Programming</figure>
+          <figure class="project-row">
+            <span>Object Oriented Programming</span>
+          </figure>
+          <figure class="project-row">
+            Python Objects and Data Structures
+          </figure>
+          <figure class="project-row">Errors and Exception Handling</figure>
+          <figure class="project-row">
+            Python Functions, Methods, and Classes
+          </figure>
+          <figure class="project-row">Advanced Python Modules</figure>
+          <div class="project-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFramePhyton()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframephyton>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/phyton.jpg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFramePhyton()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+    <hr />
+    <!-- 5th Row -->
+    <div class="row">
+      <div class="col-md-6 project-column-wrapper">
+        <div
+          class="project-column"
+          *ngIf="!isNinethButtonClicked; else noframemachine"
+        >
+          <div class="project-price-row">
+            <div class="project-price-wrapper">
+              <div class="project-price">
+                <div class="project-cost">Udemy</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-row-title">
+            <div class="project_row_title">
+              Python A-Z™: Data Science and Machine Learning
+            </div>
+          </div>
+          <figure class="project-row">Python Programming</figure>
+          <figure class="project-row">Statistics for Data Science</figure>
+          <figure class="project-row">
+            <span>Data Manipulation and Cleaning</span>
+          </figure>
+          <figure class="project-row">
+            Supervised and Unsupervised Machine Learning Algorithms
+          </figure>
+          <figure class="project-row">Big Data Analysis</figure>
+          <figure class="project-row">
+            Working with Relational and NoSQL Databases
+          </figure>
+          <div class="project-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFrameMachine()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframemachine>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/datasciencevbo.jpg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameMachine()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+      <div class="col-md-6 project-column-wrapper">
+        <div
+          class="project-column"
+          *ngIf="!isTenthButtonClicked; else noframeneural"
+        >
+          <div class="project-price-row">
+            <div class="project-price-wrapper">
+              <div class="project-price">
+                <div class="project-cost">Coursera</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-row-title">
+            <div class="project_row_title">
+              Neural Networks and Deep Learning
+            </div>
+          </div>
+          <figure class="project-row">
+            Supervised Learning with Neural Networks
+          </figure>
+          <figure class="project-row">
+            <span>Artificial Neural Networks</span>
+          </figure>
+          <figure class="project-row">Neural Network Architecture</figure>
+          <figure class="project-row">Backpropagation</figure>
+          <figure class="project-row">Shallow and Deep Neural Networks</figure>
+          <figure class="project-row">
+            Build, Train, and Deploy neural networks
+          </figure>
+          <div class="project-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFrameNeural()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframeneural>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/neuralnetworks.jpg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameNeural()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+    <hr />
+    <!-- 6th Row -->
+    <div class="row">
+      <div class="col-md-6 project-column-wrapper" aty>
+        <div
+          class="project-column"
+          *ngIf="!isEleventhButtonClicked; else noframeneuralimproving"
+        >
+          <div class="project-price-row">
+            <div class="project-price-wrapper">
+              <div class="project-price">
+                <div class="project-cost">Udemy</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-row-title">
+            <div class="project_row_title">Improving Deep Neural Networks</div>
+          </div>
+          <figure class="project-row">
+            Hyperparameter Tuning, Regularization and Optimization
+          </figure>
+          <figure class="project-row">
+            <span
+              >Bias, Reducing Overfitting, Dropout Regularization, Normalizing
+              Inputs
+            </span>
+          </figure>
+          <figure class="project-row">
+            Weight Initialization, Vanishing and Exploding Gradients, Gradient
+            Checking
+          </figure>
+          <figure class="project-row">
+            Optimization Algorithms: Adam, Mini-batch, RMSprop, SGD
+          </figure>
+          <figure class="project-row">
+            Learning Rate Decay, Solving the Problem of Local Optima
+          </figure>
+          <figure class="project-row">
+            Normalizing Activation Functions, Hyperparameters Tuning
+          </figure>
+          <div class="project-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                (click)="changeFrameNeuralImproving()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframeneuralimproving>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/improving.JPG"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameNeuralImproving()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+      <div class="col-md-6 project-column-wrapper">
+        <div
+          class="project-column"
+          *ngIf="!isTwelvethButtonClicked; else noframeneuralstructuring"
+        >
+          <div class="project-price-row">
+            <div class="project-price-wrapper">
+              <div class="project-price">
+                <div class="project-cost">Udemy</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-row-title">
+            <div class="project_row_title">
+              Structuring Machine Learning Projects
+            </div>
+          </div>
+          <figure class="project-row">
+            Streamline and Optimize ML Production Workflow
+          </figure>
+          <figure class="project-row">
+            <span
+              >Carrying Out Error Analysis and Cleaning Up Incorrectly Labeled
+              Data
+            </span>
+          </figure>
+          <figure class="project-row">Satisficing and Optimizing Metric</figure>
+          <figure class="project-row">
+            Training and Testing on Different Distributions and Addressing Data
+            Mismatch
+          </figure>
+          <figure class="project-row">
+            Learning Rate Decay, Solving the Problem of Local Optima
+          </figure>
+          <figure class="project-row">Transfer Learning</figure>
+          <div class="project-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                (click)="changeFrameNeuralStructuring()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframeneuralstructuring>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/structuring.JPG"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameNeuralStructuring()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+    <hr />
+    <!-- 7th Row -->
+    <div class="row">
+      <div class="col-md-6 project-column-wrapper">
+        <div
+          class="project-column"
+          *ngIf="!isThirteenButtonClicked; else noframeneuralconvolution"
+        >
+          <div class="project-price-row">
+            <div class="project-price-wrapper">
+              <div class="project-price">
+                <div class="project-cost">Udemy</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-row-title">
+            <div class="project_row_title">Convolutional Neural Networks</div>
+          </div>
+          <figure class="project-row">
+            Deep Convolutional Models:Resnets, InceptionNets, MobileNets,
+            EfficientNets
+          </figure>
+          <figure class="project-row">
+            <span
+              >Data Augmentation,State of Computer Vision, and Deep
+              Convolutional Models
+            </span>
+          </figure>
+          <figure class="project-row">
+            Car Detection YOLO Algorithm and YOLO Algorithm Structure
+          </figure>
+          <figure class="project-row">
+            Art Generation with Neural Style Transfer
+          </figure>
+          <figure class="project-row">
+            Object Detection, Landmark Detection, Object Localization, Face
+            Recognition
+          </figure>
+          <figure class="project-row">
+            Semantic Segmentation with U-Net and U-Net Stucture
+          </figure>
+          <div class="project-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                (click)="changeFrameNeuralConvolution()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframeneuralconvolution>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/convolutional.jpg"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameNeuralConvolution()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+      <div class="col-md-6 project-column-wrapper">
+        <div
+          class="project-column"
+          *ngIf="!isFourteenButtonClicked; else noframeneuralgans"
+        >
+          <div class="project-price-row">
+            <div class="project-price-wrapper">
+              <div class="project-price">
+                <div class="project-cost">Udemy</div>
+                <div class="time">Course</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-row-title">
+            <div class="project_row_title">
+              Generative Adversarial Networks (GANs) Specialization
+            </div>
+          </div>
+          <figure class="project-row">
+            Generative Adversarial Networks' Components
+          </figure>
+          <figure class="project-row">
+            <span>Build GANs using PyTorch </span>
+          </figure>
+          <figure class="project-row">
+            Advanced DCGANs using Convolutional Layers
+          </figure>
+          <figure class="project-row">
+            GANs for Data Augmentation and Privacy Preservation
+          </figure>
+          <figure class="project-row">Compare Generative Models</figure>
+          <figure class="project-row">
+            Assessment of GAN Fidelity and Diversity
+          </figure>
+          <div class="project-footer">
+            <div class="gem-button-container gem-button-position-center">
+              <a class="gem-button gem-green" (click)="changeFrameNeuralGANS()"
+                >See Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+        <ng-template #noframeneuralgans>
+          <div style="z-index: 100; width: 100%; height: 100%">
+            <img
+              class="cvframe"
+              src="../../assets/certificates/gansspecialization.JPG"
+              width="100%"
+              height="83%"
+            />
+            <div class="gem-button-container gem-button-position-center">
+              <a
+                class="gem-button gem-green"
+                style="width: 10rem"
+                (click)="changeFrameNeuralGANS()"
+                >Close</a
+              >
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

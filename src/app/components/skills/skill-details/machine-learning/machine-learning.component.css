@@ -1,0 +1,30 @@
+.row {
+  padding-top: 2%;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: left;
+}
+.skill-list {
+  text-align: left;
+  padding-left: 5%;
+}
+.skill-header {
+  color: #4caf50;
+}
+.skill-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.ml-image {
+  display: flex;
+  justify-content: center;
+}
+
+mat-list-item:hover {
+  cursor: pointer; /* Change cursor on hover */
+}
