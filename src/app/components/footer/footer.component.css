@@ -17,6 +17,9 @@
 .footer-link {
   color: #fff;
 }
+.footer-link:hover {
+  color: #45b29a;
+}
 @media only screen and (max-width: 600px) {
   .bottom-container {
     padding: 0;
