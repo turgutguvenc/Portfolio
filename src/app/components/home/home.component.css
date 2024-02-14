@@ -55,6 +55,9 @@
   justify-content: center;
   align-items: center;
 }
+.profile-image {
+  border-radius: 50%;
+}
 .profile-details {
   padding: 0;
   display: flex;
